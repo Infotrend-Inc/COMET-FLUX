@@ -5,7 +5,7 @@ metadata:
   namespace: flux-system
 spec:
   imageRepositoryRef:
-    name: java-app-image
+    name: comet-app-repo
   policy:
     tag:
       pattern: "latest"
