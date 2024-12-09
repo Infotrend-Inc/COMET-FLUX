@@ -1,0 +1,15 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta1
+kind: ImageUpdateAutomation
+metadata:
+  name: comet-app-update-automation
+  namespace: flux-system
+spec:
+  interval: 1m
+  git:
+    repository: flux-system
+    branch: main
+    secretRef:
+      name: flux-system
+  update:
+    path: ./clusters/eks/java-app
+    strategy: Setters
