@@ -6,5 +6,6 @@ metadata:
 spec:
   imageRepositoryRef:
     name: comet-app-repo
-  tag:
-    pattern: "latest"
+  policy:
+    semver:
+      range: '>=1.0.0'
