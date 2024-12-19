@@ -5,6 +5,8 @@ metadata:
   namespace: flux-system
   labels:
     app: comet-java-app
+  annotations:
+    image.toolkit.fluxcd.io/container-image: comet-java-container=971422678337.dkr.ecr.us-east-1.amazonaws.com/comet-app-repo
 spec:
   replicas: 3
   selector:
@@ -17,12 +19,12 @@ spec:
     spec:
       containers:
         - name: comet-java-container
-          image: 971422678337.dkr.ecr.us-east-1.amazonaws.com/comet-app-repo:1.0.0
+          image: 971422678337.dkr.ecr.us-east-1.amazonaws.com/comet-app-repo
           imagePullPolicy: Always
           ports:
-            - containerPort: 8080     
+            - containerPort: 8080
           env:
-            - name: JAVA_ENV          
+            - name: JAVA_ENV
               value: "production"
           resources:
             limits:
