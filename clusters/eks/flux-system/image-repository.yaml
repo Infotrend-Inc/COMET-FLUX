@@ -6,3 +6,4 @@ metadata:
 spec:
   interval: 1m
   image: 971422678337.dkr.ecr.us-east-1.amazonaws.com/comet-app-repo
+  provider: generic
