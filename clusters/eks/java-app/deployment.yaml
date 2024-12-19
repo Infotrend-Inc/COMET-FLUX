@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: comet-java-container
-          image: 971422678337.dkr.ecr.us-east-1.amazonaws.com/comet-app-repo:latest
+          image: 971422678337.dkr.ecr.us-east-1.amazonaws.com/comet-app-repo:1.0.0
           imagePullPolicy: Always
           ports:
             - containerPort: 8080     
