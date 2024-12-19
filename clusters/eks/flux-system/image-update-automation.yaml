@@ -16,10 +16,8 @@ spec:
       messageTemplate: 'Update image to {{ .ImageRef }}'
     push:
       branch: main
-    repository:
+    secretRef:
       name: flux-system
-      secretRef:
-        name: flux-system
   update:
     path: ./clusters/eks/java-app
     strategy: Setters
