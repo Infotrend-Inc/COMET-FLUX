@@ -6,10 +6,20 @@ metadata:
 spec:
   interval: 1m
   git:
-    repository: flux-system
-    branch: main
-    secretRef:
+    checkout:
+      ref:
+        branch: main
+    commit:
+      author:
+        name: Flux
+        email: ssingh@infotrend.com
+      messageTemplate: 'Update image to {{ .ImageRef }}'
+    push:
+      branch: main
+    repository:
       name: flux-system
+      secretRef:
+        name: flux-system
   update:
     path: ./clusters/eks/java-app
     strategy: Setters
