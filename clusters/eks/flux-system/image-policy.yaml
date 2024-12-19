@@ -7,5 +7,5 @@ spec:
   imageRepositoryRef:
     name: comet-app-repo
   policy:
-    alphabetical:
-      order: asc
+    semver:
+      range: '>=1.0.0'
