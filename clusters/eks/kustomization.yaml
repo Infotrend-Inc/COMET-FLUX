@@ -6,6 +6,6 @@ resources:
 
 images:
   - name: 971422678337.dkr.ecr.us-east-1.amazonaws.com/comet-app-repo
-    newTag: 1.0.0
+    newTag: 1.0.1
 
 namespace: flux-system
