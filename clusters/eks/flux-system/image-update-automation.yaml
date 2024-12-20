@@ -20,5 +20,5 @@ spec:
     push:
       branch: main
   update:
-    path: ./clusters/eks/flux-system/kustomization.yaml
+    path: ./clusters/eks/java-app
     strategy: Setters
