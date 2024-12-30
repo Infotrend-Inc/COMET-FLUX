@@ -8,6 +8,8 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
+  imageRepositoryRef:
+    name: comet-app-repo  
   git:
     checkout:
       ref:
@@ -22,5 +24,4 @@ spec:
   update:
     path: ./clusters/eks/java-app/deployment.yaml
     strategy: Setters
-  imageRepositoryRef:
-    name: comet-app-repo  
+    
