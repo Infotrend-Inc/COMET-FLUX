@@ -8,8 +8,6 @@ spec:
   sourceRef:
     kind: GitRepository
     name: flux-system
-  imageRepositoryRef:
-    name: comet-app-repo  
   git:
     checkout:
       ref:
