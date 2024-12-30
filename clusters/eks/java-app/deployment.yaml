@@ -6,7 +6,7 @@ metadata:
   labels:
     app: comet-java-app
   annotations:
-    image.toolkit.fluxcd.io/container-image: comet-java-container=971422678337.dkr.ecr.us-east-1.amazonaws.com/comet-app-repo
+    image.toolkit.fluxcd.io/container-image: comet-java-container=971422678337.dkr.ecr.us-east-1.amazonaws.com/comet-app-repo:{{image.tag}}
 spec:
   replicas: 3
   selector:
