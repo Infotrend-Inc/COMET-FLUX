@@ -22,3 +22,5 @@ spec:
   update:
     path: ./clusters/eks/java-app/deployment.yaml
     strategy: Setters
+  imageRepositoryRef:
+    name: comet-app-repo  
