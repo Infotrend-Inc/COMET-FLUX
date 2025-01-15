@@ -22,9 +22,6 @@ spec:
   update:
     path: ./clusters/eks/java-app
     strategy: Setters
-    setters:
-      - name: comet-java-container  
-        value: "971422678337.dkr.ecr.us-east-1.amazonaws.com/comet-app-repo"  
-  imageRepositoryRef:
-    name: comet-app-repo
+    imageRepository:
+      name: comet-app-repo
     
