@@ -22,6 +22,4 @@ spec:
   update:
     path: ./clusters/eks/java-app
     strategy: Setters
-    imageRepository:
-      name: comet-app-repo
     
