@@ -16,7 +16,7 @@ spec:
       author:
         name: Flux
         email: ssingh@infotrend.com
-      messageTemplate: 'Update image to {{ .ImageRef }}'
+      messageTemplate: '{{range .Changed.Changes}}{{print .OldValue}} -> {{println .NewValue}}{{end}}'
     push:
       branch: main
   update:
