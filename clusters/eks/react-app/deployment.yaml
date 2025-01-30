@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: comet-react-app
+  namespace: flux-system
+  labels:
+    app: comet-react-app
+  annotations:
+    image.toolkit.fluxcd.io/container-image: comet-react-container=971422678337.dkr.ecr.us-east-1.amazonaws.com/comet-app-repo
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: comet-react-app
+  template:
+    metadata:
+      labels:
+        app: comet-react-app
+    spec:
+      containers:
+        - name: comet-react-container
+          image: 971422678337.dkr.ecr.us-east-1.amazonaws.com/comet-app-repo:react-latest # {"$imagepolicy": "flux-system:comet-react-image-policy"}
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000

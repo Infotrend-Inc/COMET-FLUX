@@ -20,6 +20,6 @@ spec:
     push:
       branch: main
   update:
-    path: ./clusters/eks/java-app
+    path: ./clusters/eks
     strategy: Setters
     

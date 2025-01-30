@@ -3,6 +3,7 @@ kind: Kustomization
 resources:
   - ./java-app
   - ./flux-system
+  - ./react-app
 
 images:
   - name: 971422678337.dkr.ecr.us-east-1.amazonaws.com/comet-app-repo

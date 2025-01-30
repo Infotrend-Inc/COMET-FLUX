@@ -9,3 +9,19 @@ spec:
   policy:
     semver:
       range: '>=1.0.0'
+
+---
+
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImagePolicy
+metadata:
+  name: comet-react-image-policy
+  namespace: flux-system
+spec:
+  imageRepositoryRef:
+    name: comet-app-repo
+  filterTags:
+    pattern: '^react-latest$'  
+  policy:
+    alphabetical:
+      order: asc  
