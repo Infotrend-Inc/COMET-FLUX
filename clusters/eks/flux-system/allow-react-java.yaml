@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: allow-react-java  
+  namespace: flux-system
+spec:
+  podSelector:
+    matchLabels:
+      app: comet-react-app 
+  egress:
+  - to:
+    - podSelector:
+        matchLabels:
+          app: comet-java-app 
+    ports:
+    - protocol: TCP
+      port: 8080 
+  policyTypes:
+  - Egress
