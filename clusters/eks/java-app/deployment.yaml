@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
         - name: comet-java-container
-          image: 971422678337.dkr.ecr.us-east-1.amazonaws.com/comet-app-repo:1.0.17 # {"$imagepolicy": "flux-system:comet-app-image-policy"}
+          image: 971422678337.dkr.ecr.us-east-1.amazonaws.com/comet-app-repo:1.0.18 # {"$imagepolicy": "flux-system:comet-app-image-policy"}
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
@@ -30,8 +30,8 @@ spec:
             initialDelaySeconds: 15
             periodSeconds: 10
           readinessProbe:
-            httpGet: 
+            httpGet:
               path: /actuator/health
               port: 8080
             initialDelaySeconds: 5
-            periodSeconds: 5  
+            periodSeconds: 5
