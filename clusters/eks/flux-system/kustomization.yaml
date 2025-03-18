@@ -5,3 +5,5 @@ resources:
   - gotk-sync.yaml
   - allow-react-java.yaml
   - refresh-ecr-credentials.yaml
+  - ecr-cred-role.yaml
+  - ecr-cred-rolebinding.yaml
