@@ -7,4 +7,3 @@ resources:
   - refresh-ecr-credentials.yaml
   - ecr-cred-role.yaml
   - ecr-cred-rolebinding.yaml
-  - comet-react-app-update-automation.yaml
