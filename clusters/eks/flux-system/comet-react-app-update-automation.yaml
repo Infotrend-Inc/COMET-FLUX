@@ -1,0 +1,29 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImageUpdateAutomation
+metadata:
+  name: comet-react-app-update-automation
+  namespace: flux-system
+spec:
+  interval: 1m
+  sourceRef:
+    kind: GitRepository
+    name: flux-system # Your GitRepository source
+  git:
+    checkout:
+      ref:
+        branch: main # Your Git branch
+    commit:
+      author:
+        name: Flux
+        email: ssingh@infotrend.com
+      messageTemplate: '{{range .Changed.Changes}}{{print .OldValue}} -> {{println .NewValue}}{{end}}'
+    push:
+      branch: main 
+  update:
+    path: ./clusters/eks/react-app 
+    strategy: Setters
+    setters:
+    - field: spec.template.spec.containers[name='comet-react-container'].image 
+      name: react-image
+  imagePolicy:
+    name: comet-react-image-policy
